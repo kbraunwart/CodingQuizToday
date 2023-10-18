@@ -14,20 +14,15 @@ class Result {
 
     public static String twoStrings(String s1, String s2) {
         // Write your code here
-        return helper(s1, s2);
-    }
-
-    public static String helper(String s1, String s2) {
-        if (index < 1) {
-            return "NO";
-        } else {
-            char a1 = s1.charAt(0);
-            string result = helperChar(a1, s2);
+        String s = "NO";
+        for (int i = 0; i < s1.length(); i++) {
+            for (int j = 0; j < s2.length(); j++) {
+                if (s1.charAt(i) == s2.charAt(j)) {
+                    s = "YES";
+                }
+            }
         }
-    }
-
-    public static String helperChar(Char a1, String s2) {
-        if
+        return s;
     }
 
 }
@@ -58,3 +53,4 @@ public class Solution {
         bufferedWriter.close();
     }
 }
+
